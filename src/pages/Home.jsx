@@ -10,7 +10,7 @@ export default function Home() {
           YadhuKrishna T M
         </Typography>
         <Typography variant="h5" color="text.secondary" sx={{ mb: 4 }}>
-          Android Developer
+          Mobile Developer & Web Developer
         </Typography>
         <Button variant="contained" onClick={() => navigate("/projects")}>
           View Projects

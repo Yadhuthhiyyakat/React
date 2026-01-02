@@ -63,28 +63,13 @@ import { useParams, useNavigate } from "react-router-dom";
           ))}
         </Stack>
         <Card elevation={1} sx={{ borderRadius: 3, mb: 4 }}>
-          <CardContent>
-            <Typography sx={{ whiteSpace: "pre-line" }}>
-              {/* 
-You can add more long dummy text here if you want */}
- This section can hold the detailed explanation of the project,
-              challenges faced, your role, tech stack decisions, and outcomes.
-            </Typography>
-          </CardContent>
         </Card>
         <Paper
           elevation={0}
           sx={{ p: 2.5, borderRadius: 3, bgcolor: "grey.50", mb: 4 }}
         >
-          <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
-            Key Features
-          </Typography>
+  
           <Grid container spacing={1.5}>
-            {project.features.map((f, index) => (
-              <Grid item xs={12} key={index}>
-                <Typography>✅ {f}</Typography>
-              </Grid>
-            ))}
           </Grid>
         </Paper>
         <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>

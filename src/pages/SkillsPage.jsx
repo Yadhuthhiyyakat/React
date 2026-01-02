@@ -8,9 +8,9 @@
  } from "@mui/material";
  const skills = {
   Frontend: ["React", "Vite", "Material UI", "HTML5", "CSS3", "JavaScript", "Kotlin", "Flutter"],
-  Backend: ["Node.js", "Express", "REST APIs","Kotlin", "Flutter"],
-  Database: ["MongoDB", "MySQL"],
- Tools: ["Git", "GitHub", "Postman"],
+  Backend: ["Next.js", "Kotlin", "Flutter"],
+  Database: ["MySQL", "Firebase Firestore"],
+ Tools: ["Git", "GitHub", "VS Code", "Android Studio"],
  };
 export default function SkillsPage() {
   return (

@@ -1,3 +1,5 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Box,
   Container,
@@ -9,9 +11,27 @@ import {
  } from "@mui/material";
  import SendIcon from "@mui/icons-material/Send";
  export default function ContactPage() {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("This is a dummy form. Connect this to EmailJS or a backend.");
+    setLoading(true);
+
+    // Replace these with your actual EmailJS credentials
+    emailjs
+      .sendForm("service_73gj0wo", "template_9yfphvp", form.current, "9-6bjeGoi5aYwdTBq")
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          alert("Failed to send message. Please try again.");
+          console.error(error.text);
+        }
+      )
+      .finally(() => setLoading(false));
   };
   return (
     <Box sx={{ py: { xs: 6, md: 8 } }}>
@@ -20,11 +40,12 @@ import {
           Contact
         </Typography>
         <Paper sx={{ p: 3, borderRadius: 3 }} elevation={0}>
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={handleSubmit}>
             <Stack spacing={2}>
-              <TextField label="Name" fullWidth required />
-              <TextField label="Email" type="email" fullWidth required />
+              <TextField name="user_name" label="Name" fullWidth required />
+              <TextField name="user_email" label="Email" type="email" fullWidth required />
               <TextField
+                name="message"
                 label="Message"
                 fullWidth
                 required
@@ -35,8 +56,9 @@ import {
                 type="submit"
                 variant="contained"
                 endIcon={<SendIcon />}
+                disabled={loading}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </Button>
             </Stack>
           </form>

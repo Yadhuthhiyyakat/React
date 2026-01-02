@@ -9,14 +9,9 @@ import { Box, Container, Typography, Grid, Paper } from "@mui/material";
         <Grid container spacing={3}>
           <Grid item xs={12} md={8}>
             <Typography color="text.secondary">
-              I am a software engineer specializing in modern web development
-              with React and the MERN stack. I enjoy building clean interfaces,
-              reusable components, and scalable applications.
+            "I am a Student with a passion for Mobile Development and Web Development. With a background in Btech in Computer Science Engineering, I specialize in helping people to achieve their technical goals. I thrive on solving complex problems and am always looking for new ways to innovate in the IT space. Outside of work, you’ll likely find me at watching Movies ."
             </Typography>
             <Typography color="text.secondary" sx={{ mt: 2 }}>
- This is a dummy about section for your portfolio. You can update
-              it with your academic profile, research interests, and teaching
-              experience.
             </Typography>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -25,11 +20,11 @@ import { Box, Container, Typography, Grid, Paper } from "@mui/material";
                 Quick Info
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-                Location: Your City
+                Location: Thriprayar
                 <br />
-                Experience: X years
+                Email: yadhuthiyakkat@gmail.com
                 <br />
-                Focus: React, MERN, Data Science
+                Focus: React, Flutter , Dart, Kotlin
               </Typography>
             </Paper>
           </Grid>
