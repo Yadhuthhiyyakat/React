@@ -20,17 +20,20 @@ import {
 
     // Replace these with your actual EmailJS credentials
     emailjs
-      .sendForm("service_73gj0wo", "template_9yfphvp", form.current, "9-6bjeGoi5aYwdTBq")
-      .then(
-        (result) => {
-          alert("Message sent successfully!");
-          e.target.reset();
-        },
-        (error) => {
-          alert("Failed to send message. Please try again.");
-          console.error(error.text);
-        }
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
+      .then(() => {
+        alert("Message sent successfully!");
+        e.target.reset();
+      })
+      .catch((error) => {
+        alert("Failed to send message. Please try again.");
+        console.error(error);
+      })
       .finally(() => setLoading(false));
   };
   return (
