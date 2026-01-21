@@ -107,6 +107,22 @@ const projects = [
       "Location-based weather updates",
     ],
   },
+  {
+    id: "8",
+    title: "Mucomics-Hub",
+    shortDescription:
+      "For comic enthusiasts.",
+    description:
+      "It’s a full stack website developed using Next.js, It’s developed for the community mucomics. This website is for reading comics,chatting with fellow members,etc. This website consists of a chatroom. The front end is React.js and backend is done in supabase. The comics can be added the site with admin privilege. In chatroom uses have to send request to other users to initialize the chat with them.",
+    tech: ["Next.js", "React.js", "Supabase"],
+    live: "https://mucomics-hub.vercel.app/",
+    features: [
+      "Role-based access (Admin / User)",
+      "Comics can be stored and the users can view them",
+      "Chatroom for users to interact",
+      "Like,comment on comics are enabled",
+    ],
+  },
 ];
 
 export default projects;
